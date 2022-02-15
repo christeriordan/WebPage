@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/static/js/register.js"></script>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/beer.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <div id="logo"><a href="/">BeerInc</a></div>
+            <div id="icondiv">
+                <ul id="icons">
+                    <li><a href="/beer">Beers</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">login</a></li>
+                    {% if username %}
+                        <li>{{ username }}<a href="{{ url_for('logout') }}"> Logout</a></li> 
+                    {% endif %}
+                </ul>
+            </div>
+    </header>
+   
+    <nav>
+
+    </nav>
+    <main>
+        <div id="div">
+            <div id="text">
+                <div id="entry-list"> 
+                    <h1>Update Beer</h1>
+                        <table id="beer-table">
+                            <thead>
+                                <tr>
+                                    <th>Beer-ID</th>
+                                    <th>Beer-Name</th>
+                                    <th>Beer-Style</th>
+                                </tr>
+                            </thead>
+                        <tbody id="beer-content" >
+                            <tr>
+                                <td>{{beer[0]}}</td>
+                                <td>{{beer[1]}}</td>
+                                <td>{{beer[2]}}</td>  
+                            </tr>
+                        </table>
+
+                        <form action="#" onsubmit="event.preventDefault();update_beer();">
+                            <input type="hidden" name="beerID" id="beerID" value="{{beer[0]}}">
+                            <label for="new_name">Name</label>
+                            <input type="text" id="new_name" name="new_name" value="{{beer[1]}}" /> <br>
+                            <label for="new_style">Style</label>
+                            <input type="text" id="new_style" name="new_style" value="{{beer[2]}}"><br>
+                            <label for="new_id">BreweryID</label>
+                            <input type="text" id="new_bid"name="new_bid" value="{{beer[3]}}"><br>
+                            <input type="submit" name="" id="save-button" value="save">
+                        </form>
+                </div>
+            </div> 
+        </div>              
+    </main>
+        
+</body>
+</html>
+
+</body>
+</html>
+
+    
+   

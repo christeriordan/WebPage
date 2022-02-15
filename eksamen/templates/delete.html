@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/register.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <div id="logo"><a href="/">BeerInc</a></div>
+            <div id="icondiv">
+                <ul id="icons">
+                    <li><a href="/beer">Beers</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">login</a></li>
+                    {% if username %}
+                        <li>{{ username }}<a href="{{ url_for('logout') }}"> Logout</a></li> 
+                    {% endif %}
+                </ul>
+            </div>
+    </header>
+   
+    <nav>
+
+    </nav>
+    <main>
+        <div id="div">
+            <div id="text">
+                <table id="beer-table">
+                    <thead>
+                        <tr>
+                            <th>Beer-ID</th>
+                            <th>Beer-Name</th>
+                            <th>Beer-Style</th>
+                        </tr>
+                    </thead>
+                <tbody id="beer-content" >
+                    <tr>
+                        <td id="beer-id">{{beer[0]}}</td>
+                        <td>{{beer[1]}}</td>
+                        <td>{{beer[2]}}</td>  
+                    </tr>
+                </table>
+            <form action="#" onsubmit="event.preventDefault();delete_beer();">
+                <label for="delete">Do you want to delete this beer?</label>
+                <input type="submit" name="delete" id="delete-beer" value="Delete">
+            </form>
+            </div>
+        </div>
+    </main>
+    </div>
+</body>
+</html>

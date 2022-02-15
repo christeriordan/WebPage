@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="/static/js/register.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+    <div id="wrapper">
+    <header>
+        <div id="logo"><a href="/">BeerInc</a></div>
+        <div id="icondiv">
+            <ul id="icons">
+                <li><a href="/beer">Beers</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">login</a></li>
+                {% if username %}
+                    <li>{{ username }}<a href="{{ url_for('logout') }}"> Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <main>
+        <div id="div">
+            <div id="text">
+                        <h1>Register</h1>
+                    <div class="register-container">
+                        <form action="#" >
+                            <label for="username">Username</label> 
+                            <input type="text" id="user" placeholder="Enter username" name="user" onblur="check_username(this.value)"> 
+                            <p id="errmsg"></p>
+
+                            <label for="password">Password</label>
+                            <input type="text" id="password" placeholder="Enter password" name="password" onblur="check_password(this.value)">
+                            <p id="pwmsg"></p>
+
+                            <button type="submit" id="registerBtn">Register</button>
+                        </form>
+                    </div>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beer</title> 
+    <script src="/static/js/register.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+    <header>
+        <div id="logo"><a href="/">BeerInc</a></div>
+        <div id="icondiv">
+            <ul id="icons">
+                <li><a href="/beer">Beers</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">login</a></li>
+                {% if username %}
+                    <li>{{ username }}<a href="{{ url_for('logout') }}"> Logout</a></li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <div id="div">
+            <div id="text">
+                <div id="form-elements">
+                    <form name="beer-form" id="beer-form" method="POST">
+                        <input type="text" name="beerName" id="beerInput" size="40" placeholder="Beer name" onblur="check_beer_name(this.value)">
+                        <p id="beermsg"></p>
+                        <input type="text" name="style" id="cathegory" size="40" placeholder="Style">
+                        <select name="brewery" id="brewery">
+                            {% for i in breweries %}
+                                <option value="{{i.breweryID}}">{{i.breweryName}}</option>
+                            {% endfor %}  
+                        </select>
+                        <input type="submit" id="addButton" value="Add Beer">   
+                    </form>
+
+                    <form action="#">
+                        <input type="text" name="search" id="search" placeholder="Filter Content">
+                        <input type="button" name="searchbtn" id="searchbtn" value="Search">
+                    </form>
+                </div>
+                
+                <div id="editform">
+                    <h1>Settings</h1>
+                    <form action="#">
+                        <label for="color">Choose Color:</label>
+                        <select name="color" id="edit-color">
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                        </select>
+
+                        <br>
+                        <label for="size">FontSize:</label>
+                        <select name="size" id="font-size">
+                            <option value="10px">Small</option>
+                            <option value="20px">Medium</option>
+                            <option value="30px">Large</option>
+                        </select>
+                        
+                        <br>
+                        <label for="change">Change Apperance</label>
+                        <input type="button" name="change" id="change-apperance" value="Go">
+                        <label for="back-button">Back to main page</label>
+                        <input type="button" name="back-button" id="back-button" value="Back">
+                    </form>
+                </div>
+                <form action="radio-form">
+                    <input type="button" name="settings" id="edit" value="Settings">
+                </form>
+                <div id="entry-list"> 
+                    <h1>Beer Collection</h1>
+                    <table id="beer-table">
+                        <thead>
+                        <tr>
+                            <th>Beer-ID</th>
+                            <th>Beer-Name</th>
+                            <th>Beer-Style</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                    <tbody id="beer-content">
+                    {% for i in beers %}
+                        <tr>
+                            <td class="td-id">{{i.beerID}}</td>
+                            <td class="td-name">{{i.beerName}}</td>
+                            <td class="td-style">{{i.style}}</td>
+                            <td class="td-edit"><a href="{{ url_for('edit', beerID = i.beerID ) }}">edit</a></td>
+                            <td class="td-delete"><a href="{{ url_for('delete', beerID = i.beerID) }}">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
+
