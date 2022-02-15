@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+}
+
+/* Body */
+body{
+    background-image: url("../images/bubles.jpg");
+}
+
+/* Main */
+
+#div {
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding-top: 90px;
+    
+    }
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+    min-width: 600px;
+    max-width: 960px;
+    background-color: #e3e3e3;
+    position: relative;
+}
+main{
+    border: 1px solid black;
+}
+
+#text{
+    color: white;
+    font-size: 1em;
+    font-style: italic;
+    width: 758px;
+    margin-right: 200px;
+}
+.image {
+    width: 600px;
+    
+}
+
+
+/*---- Header ----*/
+
+header {
+    background-color: rgba(0, 0, 0, 0.70);
+    height: 90px;
+    width: 959px;
+    z-index: 9988;
+    position: fixed;
+    display: flex;
+
+}
+
+#logo{
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.600);
+    margin-top: 20px;
+}
+div#logo{
+    margin-left: 20px;
+}
+div#logo a{
+    text-decoration: none;
+    color: white;
+}
+div#logo a:hover{
+    opacity: 0.7;
+}
+div#entry-list{
+    margin-left: 10px;
+}
+
+#icons {
+    color: white;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100px ;
+    
+}
+#icons li a{
+    text-decoration: none;
+    color: white;  
+}
+#icons li a:hover{
+    opacity: 0.7;
+}
+li{
+    padding: 10px;
+}
+#icondiv{
+    position: absolute;
+    top:15px;
+    right:200px;
+    justify-content: space-between;
+    margin: 10px;
+}
+div#index-text{
+    margin-left: 10px;
+}
+/* Nav */
+nav {
+    width: 200px;
+    position: fixed;
+    right: 0px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 90px;
+    margin-right: 160px;
+    background-image: url("../images/beer.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* login/register */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 10px;
+margin-left: 10px;
+display: inline-block;
+border: 1px solid lightgreen;
+box-sizing: border-box;
+}
+
+button:hover {
+opacity: 0.7;
+}
+
+.login-container {
+padding: 20px;
+}
+.register-container{
+    margin-left: 10px;
+}
+
+/* beer */
+ul#beerList {
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    padding: 0px;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+
+ul#beerList li {
+    border-bottom: 1px solid #a9a9a9;
+    padding: 10px;
+    background-image: linear-gradient(#f9f9f9, #e3e3e3);
+}
+
+ul#beerList li:last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+ul#beerList li:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+ul#beerList li {
+    position: relative;
+    padding-left: 50px;
+    
+}
+
+#addButton{
+    margin-left: 10px;
+    background-color: lightseagreen;
+    color: yellow;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+#addButton:hover{
+    opacity: 0.7;
+}
+input#addButton{
+    margin-left: 10px;
+}
+
+#entry-list ul{
+    position: relative;
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
+    background-color: lightgoldenrodyellow;
+    margin-top: 0px;
+    min-height: 60px;
+    margin-left: 10px;  
+}
+select#font-size{
+    margin-left: 33px;
+}
+#editform{
+    display: none;
+}
+select#brewery{
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+}
+
+/* Table */
+#beer-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#beer-table td, #beer-table th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+#beer-table tr:nth-child(even){background-color: black;}
+
+#beer-table tr:hover {background-color: #ddd;}
+
+#beer-table th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #04AA6D;
+color: white;
+}
+/* error messages */
+p#errmsg{
+    color: red;
+}
+p#pwmsg{
+    color: red;
+}
+p#loginmsg{
+    color: red;
+}
