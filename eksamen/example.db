@@ -1,0 +1,5 @@
+User(userID,userName,passwordhash,role) -- (1,"Christer","asdasdasdasd21lj1n31j2n3k1j3n1","user")
+
+Brewery(breweryID, breweryName, city) -- (1,"salikatt","stavanger)
+
+beer(beerID,beerName,style,breweryID) --(1,"slam dunk","IPA",1)
