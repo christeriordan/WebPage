@@ -7,16 +7,15 @@ Then run app.py in the eksamen folder
 functionality:
 
 On the index page, you will be notified if you are not logged in with a text saying "you are not logged in".
-When you have successfully logged in, you will be notified with a text saying "Welcome" followed by the users username, which
-he registered with.
+When you have successfully logged in, you will be notified with a text saying "Welcome" followed by the users username created by the user
 
-You can redirect between the login page, register page and the beer page, by clicking on the icons in the up
+You can redirect between the login page, register page and the beer page, by clicking on the icons in the upper
 right corner.
 
 register page:
 
-While you in the register page, you can register a user by typing in a username and a password.
-If your username and password are valid, that user will be added to the database, and will be valid
+While you are in the register page, you can register a user by typing in a username and a password.
+If your username and password is valid, that user will be added to the database, and will be valid
 to log in to the webpage.
 If you try to register with a username that is already in the database, you will get an error message
 If you try to register with a password less then 4 characters, you will also get an error message.
@@ -31,9 +30,7 @@ beer page:
 On the beer page, you can browse the beers that are in the database, you can add beers if you have logged in,
 if you are not logged in, you will not be permitted to add beers to the database.
 
-The select box contains the Brewery table, where you can select which brewery your beer belongs to. (there is a
-problem with this, and is not working as intended)
-
+The select box contains the Brewery table, where you can select which brewery your beer belongs to. (intention is to be able to choose freely which brewery you want to add)
 
 You can also filter the beer table, by inputting text in the filter content input field and by pressing the search
 button
